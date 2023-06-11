@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Spring Bootアプリケーションの起動
-java -jar /var/www/java/DailyReportSystem-0.0.1-SNAPSHOT.jar > /var/log/spring.log &
+java -jar /var/www/java/DailyReportSystem-0.0.1-SNAPSHOT.jar &
 
 # Apache2の起動
 rm -f /var/run/apache2/apache2.pid
-/usr/sbin/apache2ctl -D FOREGROUND
+/usr/sbin/apachectl -D FOREGROUND
